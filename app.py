@@ -23,7 +23,7 @@ if st.button("Analyze"):
 
     # Loop through the queries and call the model with the entire text for each query
     for j, query in enumerate(queries_list):
-        #st.write(f"Query {j+1}: {query}")
+        st.write(f"Query {j+1}: {query}")
         response = model.function_call(text_to_analyze, function="extract", params=[query])
         output_dict.update(response["llm_response"])
         #if not response["llm_response"]:
